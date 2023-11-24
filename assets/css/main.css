@@ -1,0 +1,193 @@
+:root { 
+    --primary: #818cf8;
+    --secondary: #6366f1;
+    --shadow: 0 1px 3px rgba(0 , 0, 0, 0.1);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Oswald, sans-serif;
+}
+
+div {
+    display: block;
+}
+
+body {
+    background-color: whitesmoke;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 5rem;
+}
+
+h1 {
+    height: 10vh;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.container {
+    background: local;
+    padding: 25px;
+    width: 70%;
+    border-radius: 8px;
+    border: 1px solid #999;
+}
+
+/*---------------------------INPUT FORM------------------------*/
+
+.todo-body{
+   display: flex;
+   align-items: center; 
+   justify-content: space-between;
+   padding: 10px 20px;
+}
+
+.todo-body input {
+    width: 90%;
+    border: none;
+    outline: none;
+    background: whitesmoke;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #999;
+}
+
+.add-button {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 8px;
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 0 8px;
+}
+
+/*---------------------------FILTER------------------------*/
+
+.filter-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1px;
+    gap: 1rem;
+    border-bottom: solid 0.5px #D3d3d3;
+    margin: 0.2rem 1.5rem;
+}
+
+#filter{
+    width: 100%;
+    margin: 0;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -1px;
+    gap: 1rem;
+}
+
+.filter-option{
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+    line-height: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem 1.5rem;
+    justify-content: space-between;
+}
+
+.filter-option:hover{
+    border-bottom: solid 2px var(--secondary);
+    color: var(--secondary);
+}
+
+.icon{
+    padding-right: 4px;
+}
+
+/*---------------------------TASK LIST------------------------*/
+.task{
+    padding: 20px 20px;
+}
+
+#task-empty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: #333;
+    cursor: text;
+}
+
+.task-content{
+    display: flex;
+}
+
+.task-option{
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.task-menu-button{
+    position: absolute;
+}
+
+
+
+
+.task-option-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-option-container::before {
+    content: ''; /* Add an empty content */
+    position: absolute;
+    top: 0; /* Align it vertically in the middle */
+    left: 110px;
+    width: 28px; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    background-color: transparent; /* Adjust the color as needed */
+    transform: translateY(-10%); /* Center it vertically */
+}
+
+.task-option-container::before:hover{
+
+}
+
+.filter-option-button{
+    padding-right: 8px;
+}

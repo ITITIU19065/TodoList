@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href=".\assets\css\fonts\fontawesome\css\all.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <h1>
+        <i class="fa-solid fa-file-shield"></i>
+        TodoList
+    </h1>
+
+    <div class="container">
+        <div class="todo-body">
+            <input type="text" 
+            id="todoText" 
+            class="todo-input"
+            placeholder="Enter your task here...">
+
+            <button class="add-button"
+                    id="AddUpdateClick"
+                    onclick="CreateToDoData()">
+                <i class="fa-solid fa-plus add-icon"></i>
+                Add
+            </button>
+        </div>
+        
+        <div class="filter-container">
+            <ul id="filter">
+                <li id="all" class="filter-option">
+                    <i class="icon fa-solid fa-list-ul"></i>
+                    All
+                </li>
+
+                <li id="pending" class="filter-option">
+                    <i class="icon fa-regular fa-circle"></i>
+                    Pending
+                </li>
+
+                <li id="completed" class="filter-option">
+                    <i class="icon fa-solid fa-square-check"></i>
+                    Completed
+                </li>
+            </ul>
+        </div>
+        
+        <div class="task">
+
+            <ul id="list" class="list-item">
+                <i id="task-empty">No task here..!</i>
+            </ul>
+
+            <div id="task-content">
+
+            </div>
+
+            <div class="task-option">
+                <!-- TESTER -->
+                <!-- <i id="task-menu-button" class="fa-solid fa-ellipsis-vertical"></i>
+
+                <div class="task-option-container">
+                    <button id="button">
+                        <i id="task-option-button" class="fa-regular fa-pen-to-square"></i>
+                        Edit
+                    </button>
+                    <button id="button">
+                        <i id="task-option-button" class="fa-solid fa-trash-can"></i>
+                        Delete
+                    </button>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
